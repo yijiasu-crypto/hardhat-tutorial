@@ -9,5 +9,5 @@ let provider = new ethers.providers.JsonRpcProvider("https://evm-cronos.crypto.o
 let contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, provider);
 
 contract.latestAnswer().then((value) => {
-    console.log("The res is: " + value / 10e8);
+    console.log("The price is %s", value / 10e8);
 });
